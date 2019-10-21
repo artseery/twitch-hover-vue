@@ -1,4 +1,4 @@
-# twitch-hover-vue (WIP)
+# Twitch hover vue (WIP)
 
 ## Hover effect from twitch.tv on Vue.js
 
