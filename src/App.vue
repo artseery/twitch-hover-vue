@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <twitch-hover :substrate-color="'black'" :card-color="'yellow'"></twitch-hover>
+        <twitch-hover :substrate-color="'red'" :card-color="'cyan'"></twitch-hover>
+        <twitch-hover :substrate-color="'lightgray'" :card-color="'pink'"></twitch-hover>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    import TwitchHover from "@/components/TwitchHover";
+
+    export default {
+
+        name: 'app',
+        components: {
+            TwitchHover
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #app, body, html {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+    #app {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
 </style>
