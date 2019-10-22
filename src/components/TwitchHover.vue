@@ -23,7 +23,6 @@
             cornerStyle: function (color, side) {
                 return `border-${side}-color: ${color}`
             },
-            // eslint-disable-next-line no-unused-vars
             cardSize: function (width, height) {
                 return `width: ${width}px; height: ${height}px`
             }
