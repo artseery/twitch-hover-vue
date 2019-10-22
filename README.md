@@ -1,29 +1,5 @@
-# twitch-hover-vue
+# Twitch hover vue (WIP)
 
-## Project setup
-```
-npm install
-```
+## Hover effect from twitch.tv on Vue.js
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Component for hover effect on block like on twitch.tv
