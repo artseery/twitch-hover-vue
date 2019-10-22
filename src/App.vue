@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <twitch-hover :substrate-color="'black'" :card-color="'yellow'"></twitch-hover>
-        <twitch-hover :substrate-color="'red'" :card-color="'cyan'"></twitch-hover>
-        <twitch-hover :substrate-color="'lightgray'" :card-color="'pink'"></twitch-hover>
+        <twitch-hover :width="'300'" :height="400" :substrate-color="'black'" :card-color="'yellow'"></twitch-hover>
+        <twitch-hover :width="300" :substrate-color="'red'" :card-color="'cyan'"></twitch-hover>
+        <twitch-hover :height="400" :substrate-color="'lightgray'" :card-color="'pink'"></twitch-hover>
     </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="tw-lift">
+    <div class="tw-lift" :style="cardSize(width, height)">
         <div class="tw-lift__card" :style="backgroundStyle(cardColor)"></div>
         <div class="tw-lift__substrate" :style="backgroundStyle(substrateColor)"></div>
         <div class="tw-lift__corner tw-lift__corner--top-left" :style="cornerStyle(substrateColor, 'right')"></div>
@@ -13,6 +13,8 @@
         props: {
             'substrateColor': {type: String, default: 'deeppink'},
             'cardColor': {type: String, default: 'blue'},
+            'width': {type: String, default: '200'},
+            'height': {type: String, default: '300'}
         },
         methods: {
             backgroundStyle: function (color) {
@@ -20,20 +22,22 @@
             },
             cornerStyle: function (color, side) {
                 return `border-${side}-color: ${color}`
+            },
+            // eslint-disable-next-line no-unused-vars
+            cardSize: function (width, height) {
+                return `width: ${width}px; height: ${height}px`
             }
         }
     }
 </script>
 
 <style scoped lang="sass">
-
     $lift: 10px
     $timeFunction: .2s
     $cardWidth: 200px
     $cardHeight: 300px
+
     .tw-lift
-        width: $cardWidth
-        height: $cardHeight
         position: relative
 
         &:hover
