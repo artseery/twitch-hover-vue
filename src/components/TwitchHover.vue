@@ -1,6 +1,8 @@
 <template>
     <div class="tw-lift" :style="cardSize(width, height)">
-        <div class="tw-lift__card" :style="backgroundStyle(cardColor)"></div>
+        <div class="tw-lift__card" :style="backgroundStyle(cardColor)">
+            <img v-if="imageSrc" :src="imageSrc" class="tw-lift__card__image"/>
+        </div>
         <div class="tw-lift__substrate" :style="backgroundStyle(substrateColor)"></div>
         <div class="tw-lift__corner tw-lift__corner--top-left" :style="cornerStyle(substrateColor, 'right')"></div>
         <div class="tw-lift__corner tw-lift__corner--bottom-right" :style="cornerStyle(substrateColor, 'top')"></div>
@@ -13,8 +15,9 @@
         props: {
             'substrateColor': {type: String, default: 'deeppink'},
             'cardColor': {type: String, default: 'blue'},
-            'width': {type: String, default: '200'},
-            'height': {type: String, default: '300'}
+            'width': {type: Number, default: 200},
+            'height': {type: Number, default: 300},
+            'imageSrc': {type: String, default: null}
         },
         methods: {
             backgroundStyle: function (color) {
@@ -59,7 +62,11 @@
             flex-direction: row
             justify-content: center
             align-items: center
-            padding: 10px
+            // padding: 10px
+            &__image
+                object-fit: cover
+                width: 100%
+                height: 100%
 
         &__substrate
             width: 100%
