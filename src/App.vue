@@ -20,6 +20,8 @@
                         :image-src="'https://i.imgur.com/nTLC53I.png'"
                         :width="300"
                         :substrate-color="'#01f1c0'"
+                        :duration="0.3"
+                        :timing-function="'ease-in-out'"
                         :card-color="'blue'"></twitch-hover>
                 <twitch-hover
                         :image-src="'http://cdn.shopify.com/s/files/1/0029/8198/6413/products/NLBCoolPink_1800x1800.jpg?v=1554576538'"
@@ -84,9 +86,10 @@
                 border-bottom: 1px solid darkgray
 
             .title
-                font-family: 'Cinzel', serif
+                font-family: 'Montserrat', serif
                 margin-top: 20px
-                font-size: 2.2rem
+                font-size: 2.5rem
+                font-weight: 500
 
             .cards
                 height: 100%
